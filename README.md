@@ -15,11 +15,12 @@ less
 ####  ui框架
 antd less
 全局引入
-在index.js中引入 import 'antd/dist/antd.css';
-按需引入
+在index.js中引入 import 'ant  d/dist/antd.css';
+按需引入(注意按需引入使用的less的版本是2.7.3，需要将less版本降到2.7.3)
+ 安装 babel-plugin-import 插件 在webpack.config.js更改配置(plugins里面添加 ['import',{'libraryName':'antd','style':true}])
 ####  基本配置
 起别名
-config webpack.config.js中 alias里设置 'style':path.join(__dirname,'../src/style'),
+config webpack.config.js中 alias里设置 1'style':path.join(__dirname,'../src/style'),
 
 服务器代理
 webpackDevServer.config.js里设置
